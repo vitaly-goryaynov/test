@@ -3,9 +3,9 @@ from math import sqrt
 
 def QuadraticEquation():
 
-    a = int(input('Введите коэффициенты  "a"  для уравнения ax^2 + bx + c = 0 >>> '))
-    b = int(input('Введите коэффициенты  "b"  для уравнения ax^2 + bx + c = 0 >>>'))
-    c = int(input('Введите коэффициенты  "c"  для уравнения ax^2 + bx + c = 0 >>> '))
+    a = float(input('Введите коэффициенты  "a"  для уравнения ax^2 + bx + c = 0 >>> '))
+    b = float(input('Введите коэффициенты  "b"  для уравнения ax^2 + bx + c = 0 >>>'))
+    c = float(input('Введите коэффициенты  "c"  для уравнения ax^2 + bx + c = 0 >>> '))
 
     discriminant = b * b - 4 * a * c
 
@@ -24,9 +24,9 @@ def QuadraticEquation():
 
 def TriangleArea():
 
-    a = int(input('Введите длину стороны треугольника "a" >>> '))
-    b = int(input('Введите длину стороны треугольника "b" >>> '))
-    c = int(input('Введите длину стороны треугольника "c" >>> '))
+    a = float(input('Введите длину стороны треугольника "a" >>> '))
+    b = float(input('Введите длину стороны треугольника "b" >>> '))
+    c = float(input('Введите длину стороны треугольника "c" >>> '))
 
     if ((a + b) > c) or ((a + c) > b) or ((b + c) > a):
         s = (a + b + c) / 2
@@ -36,18 +36,18 @@ def TriangleArea():
 
 def TemperatureConversion():
 
-    choice = int(input("""Выберите опцию: 
+    choice = float(input("""Выберите опцию: 
     1. Конвертировать Цельсий в Фаренгейт
     2. Конвертировать Фаренгейт в Цельсий
     >>> """))
 
     if choice == 1:
-        celsius = int(input('Введите температуру в градусах Цельсия:'))
+        celsius = float(input('Введите температуру в градусах Цельсия:'))
         fahrenheit = (celsius * 9 / 5) + 32
         print('Температура в градусах Фаренгейта:', fahrenheit)
 
     elif choice == 2:
-        fahrenheit = int(input('Введите температуру в градусах Фаренгейта:'))
+        fahrenheit = float(input('Введите температуру в градусах Фаренгейта:'))
         celsius = 5/9 * (fahrenheit - 32)
         print('Температура в градусах Цельсия: ', celsius)
 
