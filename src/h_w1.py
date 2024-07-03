@@ -1,22 +1,22 @@
 from math import sqrt
 
 
-def input_param(text):
-    num = 0
+# def input_param(text):
+#     num = 0
 
-    while True:
-        try:
-            num = float(input(text))
-            return num
-        except ValueError:
-            print("Ошибка ввода данных! Введите чиловое значение.")
+    # while True:
+    #     try:
+    #         num = float(input(text))
+    #         return num
+    #     except ValueError:
+    #         print("Ошибка ввода данных! Введите чиловое значение.")
 
 
 def QuadraticEquation():
 
-    a = input_param('Введите коэффициенты  "a"  для уравнения ax^2 + bx + c = 0 >>> ')
-    b = input_param('Введите коэффициенты  "b"  для уравнения ax^2 + bx + c = 0 >>> ')
-    c = input_param('Введите коэффициенты  "c"  для уравнения ax^2 + bx + c = 0 >>> ')
+    a = float(input('Введите коэффициенты  "a"  для уравнения ax^2 + bx + c = 0 >>> '))
+    b = float(input('Введите коэффициенты  "b"  для уравнения ax^2 + bx + c = 0 >>> '))
+    c = float(input('Введите коэффициенты  "c"  для уравнения ax^2 + bx + c = 0 >>> '))
 
     discriminant = b * b - 4 * a * c
 
@@ -32,18 +32,25 @@ def QuadraticEquation():
     else:
         print('У уравнения нет действительных корней')
 
-QuadraticEquation()
+
+# QuadraticEquation()
 
 def TriangleArea():
 
-    a = input_param('Введите длину стороны треугольника "a" >>> ')
-    b = input_param('Введите длину стороны треугольника "b" >>> ')
-    c = input_param('Введите длину стороны треугольника "c" >>> ')
+    a = float(input('Введите длину стороны треугольника "a" >>> '))
+    b = float(input('Введите длину стороны треугольника "b" >>> '))
+    c = float(input('Введите длину стороны треугольника "c" >>> '))
 
-    if ((a + b) > c) or ((a + c) > b) or ((b + c) > a):
-        s = (a + b + c) / 2
-        area = sqrt(s * (s - a) * (s - b) * (s - c))
-        print(f'Площадь треугольника: ', area)
+    if a > 0 and b > 0 and c > 0:
+        if ((a + b) > c) or ((a + c) > b) or ((b + c) > a):
+            s = (a + b + c) / 2
+            area = sqrt(s * (s - a) * (s - b) * (s - c))
+            print(f'Площадь треугольника: ', area)
+    else:
+        print('Условия существования треугольника не соблюдены')
+
+
+TriangleArea()
 
 
 def TemperatureConversion():
@@ -54,14 +61,15 @@ def TemperatureConversion():
     >>> """))
 
     if choice == 1:
-        celsius = input_param('Введите температуру в градусах Цельсия:')
+        celsius = float(input('Введите температуру в градусах Цельсия:'))
         fahrenheit = (celsius * 9 / 5) + 32
         print('Температура в градусах Фаренгейта:', fahrenheit)
 
     elif choice == 2:
-        fahrenheit = input_param('Введите температуру в градусах Фаренгейта:')
+        fahrenheit = float(input('Введите температуру в градусах Фаренгейта:'))
         celsius = 5/9 * (fahrenheit - 32)
         print('Температура в градусах Цельсия: ', celsius)
+
 
     else:
         print('Неправильный выбор')
