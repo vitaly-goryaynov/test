@@ -50,7 +50,7 @@ def TriangleArea():
         print('Условия существования треугольника не соблюдены')
 
 
-TriangleArea()
+# TriangleArea()
 
 
 def TemperatureConversion():
@@ -74,5 +74,7 @@ def TemperatureConversion():
     else:
         print('Неправильный выбор')
 
+
+# TemperatureConversion()
 
 
