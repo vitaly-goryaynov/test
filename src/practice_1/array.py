@@ -29,10 +29,8 @@ class Array:
         return self.sum() / len(self.array)
 
 
-a1 = Array(1, 2, 2)
 
-print(a1.sum())
-print((a1.multiply()))
+a1 = Array(1,2,3,4,5,6,7,8,9,10)
 print((a1.average()))
 
 
